@@ -1,0 +1,4 @@
+UserName: newuser
+PassWord: newuser
+Email: newuser@gmail.com
+
