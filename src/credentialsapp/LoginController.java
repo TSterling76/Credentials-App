@@ -24,7 +24,8 @@ public class LoginController {
     private final LoginView view;
     MainMenu menu;
    
-    //Test
+    //Test comment
+    //another
     LoginController(LoginModel model, LoginView view) {
         this.view = view;
         this.model = model;
