@@ -28,15 +28,6 @@ public class MainMenu extends JFrame{
     MainMenu(){
         //this.model = model;
         super("Main Menu");
-        title = new JLabel(" Enter Your First Name: ");
-        fname = new JTextField(20);
-        lname1 = new JLabel(" Enter Your Last Name: ");
-        lname = new JTextField(20);
-        age = new JLabel("  Enter your Age: ");
-        ageSlider = new JSlider(JSlider.HORIZONTAL, 1,30,2);
-        ageSlider.setMajorTickSpacing(2);
-        ageSlider.setPaintTicks(true);
-        ageSlider.setPaintLabels(true);
         saveInfo = new JButton("List Credentials");
         loadInfo = new JButton("Encrypt your Files");
         generatePass  = new JButton("Generate Password");
