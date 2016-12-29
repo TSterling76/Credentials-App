@@ -63,13 +63,14 @@ public class LoginController {
                             break;
                         } else if (puname.equals("UserName: ") && ppaswd.equals("Password: ")) {
                             JOptionPane.showMessageDialog(null, "Please insert Username and Password"); 
-                            //System.out.print("Didnt Work");
+                            System.out.print("Didnt Work");
                             break;
                         } else {
                             JOptionPane.showMessageDialog(null, "Wrong Username / Password");
                             //view.setUserField("");
                             // view.setPassField("");
                             // view.requestFocus();
+                            System.out.print("Didnt Work");
                             break;
                         }
                     }
