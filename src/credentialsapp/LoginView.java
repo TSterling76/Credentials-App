@@ -65,7 +65,7 @@ public class LoginView extends JFrame implements ActionListener{
      this.btnLogin.setBounds(180,130,80,20);
      this.newUSer.setBounds(180, 170, 80, 20);
      this.userField.setBounds(150,30,150,30);
-     this.passField.setBounds(150,65,150,40);
+     this.passField.setBounds(150,65,150,30);
         
         //btnLogin.addActionListener(this);
        getContentPane().add(content);
