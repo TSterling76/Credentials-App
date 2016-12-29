@@ -18,12 +18,12 @@ import javax.swing.JTextField;
  * @author nsterling76
  */
 public class MainMenu extends JFrame{
-    private final JButton saveInfo, loadInfo,generatePass,generateUser,generateHash;
-    private JTextField fname, lname, gpa;
-    private JSlider ageSlider;
-    private JLabel outputLabel;
-    private JLabel title,lname1, age; 
-    //private LoginModel model;
+    private JButton saveInfo;
+    private JButton loadInfo;
+    private JButton generatePass;
+    private JButton generateUser;
+    private JButton generateHash;
+    private LoginModel model;
     
     MainMenu(){
         //this.model = model;
@@ -33,9 +33,7 @@ public class MainMenu extends JFrame{
         generatePass  = new JButton("Generate Password");
         generateUser = new JButton("Generate Username");
         generateHash = new JButton("Generate Hashes");
-        
-        outputLabel = new JLabel("   Output: No info yet");
-        
+         
         JPanel content = new JPanel();
         content.add(saveInfo);
         content.add(loadInfo);
@@ -99,4 +97,74 @@ public class MainMenu extends JFrame{
 //     public JLabel getOutputLabel(){
 //         return outputLabel;
 //     }
+
+    /**
+     * @return the saveInfo
+     */
+    public JButton getSaveInfo() {
+        return saveInfo;
+    }
+
+    /**
+     * @param saveInfo the saveInfo to set
+     */
+    public void setSaveInfo(JButton saveInfo) {
+        this.saveInfo = saveInfo;
+    }
+
+    /**
+     * @return the loadInfo
+     */
+    public JButton getLoadInfo() {
+        return loadInfo;
+    }
+
+    /**
+     * @param loadInfo the loadInfo to set
+     */
+    public void setLoadInfo(JButton loadInfo) {
+        this.loadInfo = loadInfo;
+    }
+
+    /**
+     * @return the generatePass
+     */
+    public JButton getGeneratePass() {
+        return generatePass;
+    }
+
+    /**
+     * @param generatePass the generatePass to set
+     */
+    public void setGeneratePass(JButton generatePass) {
+        this.generatePass = generatePass;
+    }
+
+    /**
+     * @return the generateUser
+     */
+    public JButton getGenerateUser() {
+        return generateUser;
+    }
+
+    /**
+     * @param generateUser the generateUser to set
+     */
+    public void setGenerateUser(JButton generateUser) {
+        this.generateUser = generateUser;
+    }
+
+    /**
+     * @return the generateHash
+     */
+    public JButton getGenerateHash() {
+        return generateHash;
+    }
+
+    /**
+     * @param generateHash the generateHash to set
+     */
+    public void setGenerateHash(JButton generateHash) {
+        this.generateHash = generateHash;
+    }
 }
