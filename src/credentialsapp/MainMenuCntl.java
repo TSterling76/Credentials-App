@@ -31,12 +31,12 @@ public class MainMenuCntl {
         public void actionPerformed(ActionEvent ae) {
            
             JButton btu = (JButton) ae.getSource();
-            if () {
+            if (btu == menu.getLoadInfo()) {
+                
             }
 
-            if (btu == view.getNewUSer()) {
-                view.dispose();
-                NewUser user = new NewUser(model);
+            if (btu == menu.getSaveInfo()) {
+                
 
             }
 
