@@ -69,10 +69,10 @@ public class NewUser extends JFrame implements Serializable{
     pass.setBounds(20, 65, 150, 30);
     emailLabel.setBounds(20,100 , 150, 30);
     userField.setBounds(150,30,150,30);
-    passField.setBounds(150,30,150,30);
+    passField.setBounds(150,65,150,30);
     email.setBounds(150,100,150,30);
     create.setBounds(180,150,80,20);
-    backButton.setBounds(180, 195, 80, 20);
+    backButton.setBounds(177, 195, 85, 20);
 
     getContentPane().add(newUserPanel);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
