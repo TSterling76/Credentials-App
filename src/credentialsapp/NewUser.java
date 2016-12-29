@@ -77,6 +77,7 @@ public class NewUser extends JFrame implements Serializable{
     getContentPane().add(newUserPanel);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(true);
+    //asd
     
     /*Writer writer = null;
     File check = new File("userInfo.txt");
