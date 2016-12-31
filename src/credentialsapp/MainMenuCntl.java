@@ -20,6 +20,8 @@ import javax.swing.JOptionPane;
  */
 public class MainMenuCntl {
      private MainMenu menu;
+     private LoginController cntl;
+     private LoginView view;
     
     MainMenuCntl(){
     
@@ -38,6 +40,19 @@ public class MainMenuCntl {
             if (btu == menu.getSaveInfo()) {
                 
 
+            }
+            
+            if(btu == menu.getGenerateHash()){
+            
+            }
+            
+            if(btu == menu.getGeneratePass()){
+            
+            }
+            
+            if(btu == menu.getGenerateUser()){
+            
+            
             }
 
         }
