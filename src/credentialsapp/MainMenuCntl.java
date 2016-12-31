@@ -39,7 +39,6 @@ public class MainMenuCntl {
 
             if (btu == menu.getSaveInfo()) {
                 
-
             }
             
             if(btu == menu.getGenerateHash()){
