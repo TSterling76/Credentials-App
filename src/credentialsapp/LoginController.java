@@ -22,7 +22,7 @@ public class LoginController {
 
     private final LoginModel model;
     private final LoginView view;
-    MainMenu menu;
+    MainMenuView menu;
    
     //Test comment
     //another
@@ -58,7 +58,7 @@ public class LoginController {
 
                         if ((puname.equals(usertxt)) && (ppaswd.equals(passtxt))) {
                             JOptionPane.showMessageDialog(null, " WELCOME! ");
-                            menu = new MainMenu();
+                            menu = new MainMenuView();
                             view.dispose();
                             break;
                         } 
