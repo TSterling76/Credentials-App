@@ -19,37 +19,42 @@ import javax.swing.JOptionPane;
  * @author nsterling76
  */
 public class MainMenuCntl {
-     private MainMenu menu;
+     private MainMenuView view;
      private LoginController cntl;
-     private LoginView view;
+     private LoginView login;
+     private ListOfCredentialsView list;
+     private ListOfCredentialsModel model;
     
-    MainMenuCntl(){
-    
+    MainMenuCntl(MainMenuView view){
+        this.view = view;
+        view.addActionListener(new Activate());
     }
    
-    class Authenticate implements ActionListener {
+    class Activate implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
            
             JButton btu = (JButton) ae.getSource();
-            if (btu == menu.getLoadInfo()) {
+            if (btu == view.getLoadInfo()) {
                 
             }
 
-            if (btu == menu.getSaveInfo()) {
-                
+            if (btu == view.getSaveInfo()) {
+                view.dispose();
+                list = new ListOfCredentialsView(model);
+                System.out.println(1);
             }
             
-            if(btu == menu.getGenerateHash()){
+            if(btu == view.getGenerateHash()){
             
             }
             
-            if(btu == menu.getGeneratePass()){
+            if(btu == view.getGeneratePass()){
             
             }
             
-            if(btu == menu.getGenerateUser()){
+            if(btu == view.getGenerateUser()){
             
             
             }
