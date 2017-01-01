@@ -53,7 +53,7 @@ public class ListOfCredentialsCntl implements Serializable {
                 //i+=1;
                 
                 view.setEnabled(true);
-                view.getListOfCred().append(i + ". Your Username: " + view.getListUsername().getText() + ", Your Password: " + view.getListPassword().getText() + ", Your Email: "
+                view.getListOfCred().append(i + "\n. Your Username: " + view.getListUsername().getText() + ", Your Password: " + view.getListPassword().getText() + ", Your Email: "
                         + view.getListEmail().getText() + ", Your Site/Software Name: "+view.getListUrl().getText() + "\n");
 
                 System.out.println("succ");
