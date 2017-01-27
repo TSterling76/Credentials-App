@@ -60,12 +60,12 @@ public class LoginController {
                             JOptionPane.showMessageDialog(null, " WELCOME! ");
                             menu = new MainMenuView();
                             view.dispose();
-                            break;
+                           // break;
                         } 
                         else if (puname.equals("UserName: ") && ppaswd.equals("Password: ")) {
                             JOptionPane.showMessageDialog(null, " Please insert Username and Password "); 
                             System.out.print("Didnt Work");
-                            break;
+                          //  break;
                         } 
                         else {
                             JOptionPane.showMessageDialog(null, "Wrong Username / Password");
@@ -73,7 +73,7 @@ public class LoginController {
                             // view.setPassField("");
                             // view.requestFocus();
                             System.out.print("Didnt Work");
-                            break;
+                          //  break;
                         }
                     }
                 } catch (IOException ex) {
