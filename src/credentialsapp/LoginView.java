@@ -96,6 +96,7 @@ public class LoginView extends JFrame implements ActionListener{
     public void addLoginListener(ActionListener log) {
           getBtnLogin().addActionListener(log);
           getNewUSer().addActionListener(log);
+          getForgotPass().addActionListener(log);
         }
 
     /**
