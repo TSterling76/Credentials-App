@@ -23,15 +23,12 @@ public class LoginController {
     private final LoginModel model;
     private final LoginView view;
     MainMenuView menu;
-   
-    //Test comment
-    //another
+
     LoginController(LoginModel model, LoginView view) {
         this.view = view;
         this.model = model;
 
         view.addLoginListener(new Authenticate());
-
     }
 
     class Authenticate implements ActionListener {
@@ -43,10 +40,9 @@ public class LoginController {
             JButton btu = (JButton) ae.getSource();
             if (btu == view.getBtnLogin()) {
                 try {
-                    br = new BufferedReader(new FileReader(view.getUserField()+".txt"));
+                    br = new BufferedReader(new FileReader(view.getUserField() + ".txt"));
                     // StringBuilder sb = new StringBuilder();
                     Scanner scan = new Scanner(br);
-                    //String line = null;
                     String usertxt;
                     String passtxt;
                     String puname = "UserName: " + view.getUserField();
@@ -57,27 +53,14 @@ public class LoginController {
                         passtxt = scan.nextLine();
 
                         if ((puname.equals(usertxt)) && (ppaswd.equals(passtxt))) {
-                            JOptionPane.showMessageDialog(null, " WELCOME! ");
                             menu = new MainMenuView();
+                            JOptionPane.showMessageDialog(null, " WELCOME! " + view.getUserField());
                             view.dispose();
-                           // break;
-                        } 
-                        else if (puname.equals("UserName: ") && ppaswd.equals("Password: ")) {
-                            JOptionPane.showMessageDialog(null, " Please insert Username and Password "); 
-                            System.out.print("Didnt Work");
-                          //  break;
-                        } 
-                        else {
-                            JOptionPane.showMessageDialog(null, "Wrong Username / Password");
-                            //view.setUserField("");
-                            // view.setPassField("");
-                            // view.requestFocus();
-                            System.out.print("Didnt Work");
-                          //  break;
+
                         }
                     }
                 } catch (IOException ex) {
-                  //  ex.printStackTrace();
+
                 }
 
             }
@@ -85,6 +68,11 @@ public class LoginController {
             if (btu == view.getNewUSer()) {
                 view.dispose();
                 NewUser user = new NewUser(model);
+
+            }
+
+            if (btu == view.getForgotPass()) {
+                System.out.println("TEST");
 
             }
 
