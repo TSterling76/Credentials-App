@@ -9,6 +9,7 @@ package credentialsapp;
  *
  * @author nsterling76
  */
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -19,7 +20,7 @@ import javax.swing.JPanel;
  *
  * @author nsterling76
  */
-public class MainMenuView extends JFrame{
+public class MainMenuView extends JFrame implements ActionListener{
     private JButton saveInfo;
     private JButton loadInfo;
     private JButton generatePass;
@@ -51,13 +52,7 @@ public class MainMenuView extends JFrame{
        
         
     }
-public void addActionListener(ActionListener log) {
-          getSaveInfo().addActionListener(log);
-          getLoadInfo().addActionListener(log);
-          getGeneratePass().addActionListener(log);
-          getGenerateUser().addActionListener(log);
-          getGenerateHash().addActionListener(log);
-        }
+    
     /**
      * @return the saveInfo
      */
@@ -126,5 +121,18 @@ public void addActionListener(ActionListener log) {
      */
     public void setGenerateHash(JButton generateHash) {
         this.generateHash = generateHash;
+    }
+    
+    public void addActionListener(ActionListener log) {
+          getSaveInfo().addActionListener(log);
+          getLoadInfo().addActionListener(log);
+          getGeneratePass().addActionListener(log);
+          getGenerateUser().addActionListener(log);
+          getGenerateHash().addActionListener(log);
+        }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
