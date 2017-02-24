@@ -15,9 +15,10 @@ import javax.swing.JButton;
  */
 public class MainMenuCntl {
      private MainMenuView view;
+    
      private LoginController cntl;
      private LoginView login;
-     private ListOfCredentials list;
+     //private ListOfCredentialsView list;
     
     MainMenuCntl(MainMenuView view){
         this.view = view;
@@ -30,11 +31,12 @@ public class MainMenuCntl {
         public void actionPerformed(ActionEvent ae) {
             JButton btu = (JButton) ae.getSource();
             if (btu == view.getLoadInfo()) {
-                
+                System.out.println(1);
             }
             if (btu == view.getSaveInfo()) {
                 view.dispose();
-                list = new ListOfCredentials();
+                ListOfCredentialsModel mod = new ListOfCredentialsModel();
+                ListOfCredentialsView list = new ListOfCredentialsView(mod);
                 System.out.println(1);
             }
             if(btu == view.getGenerateHash()){
