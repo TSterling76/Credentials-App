@@ -11,7 +11,6 @@ package credentialsapp;
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,29 +24,29 @@ public class LoginView extends JFrame implements ActionListener{
     
     private JButton btnLogin;
     private LoginModel model = new LoginModel();
-   // private JButton blogin;
     private final JTextField userField;
     private final JTextField passField;
     private JButton newUSer;
+    private JButton forgotPass;
     private final JLabel userName;
     private final JLabel passWord;
 
    
     public LoginView(LoginModel model){
-        //this.model = model;
+        
         super("Credentials Application");
        
         this.userField = new JTextField(15);
         this.passField = new JPasswordField(15);
-       //this.passField.setEchoChar('*');
         this.btnLogin = new JButton(" Login ");
         this.newUSer = new JButton("New User?");
-        this.userName = new JLabel("Username");
-        this.passWord = new JLabel("Password");
+        this.forgotPass = new JButton("Forgot Password");
+        this.userName = new JLabel("Username : ");
+        this.passWord = new JLabel("Password : ");
         
         JPanel content = new JPanel();
         
-        setSize(470,270);
+        setSize(360,340);
         setLocation(500,280);
         content.setLayout(null); 
        
@@ -58,20 +57,22 @@ public class LoginView extends JFrame implements ActionListener{
         content.add(newUSer);
         content.add(userName);
         content.add(passWord);
-       
+        content.add(forgotPass);
          
-     this.userName.setBounds(20, 30, 150, 30);
-     this.passWord.setBounds(20, 65, 150, 30);
-     this.btnLogin.setBounds(180,130,80,20);
-     this.newUSer.setBounds(180, 170, 80, 20);
-     this.userField.setBounds(150,30,150,30);
-     this.passField.setBounds(150,65,150,30);
+        this.userName.setBounds(40, 30, 150, 30);
+        this.passWord.setBounds(40, 65, 150, 30);
+        this.btnLogin.setBounds(100,130,140,20);
+        this.newUSer.setBounds(100, 170, 140, 20);
+        this.userField.setBounds(140,30,150,30);
+        this.passField.setBounds(140,65,150,30);
+        this.forgotPass.setBounds(100, 210, 140, 20);
         
-        //btnLogin.addActionListener(this);
        getContentPane().add(content);
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       getContentPane().setBackground(java.awt.Color.DARK_GRAY);
        setVisible(true);
-
+       //btnLogin.addActionListener(this);
+       //this.model = model;
     }
 
     /**
@@ -151,6 +152,20 @@ public class LoginView extends JFrame implements ActionListener{
      */
     public void setNewUSer(JButton newUSer) {
         this.newUSer = newUSer;
+    }
+
+    /**
+     * @return the forgotPass
+     */
+    public JButton getForgotPass() {
+        return forgotPass;
+    }
+
+    /**
+     * @param forgotPass the forgotPass to set
+     */
+    public void setForgotPass(JButton forgotPass) {
+        this.forgotPass = forgotPass;
     }
     
 }
