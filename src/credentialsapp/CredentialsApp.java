@@ -19,9 +19,8 @@ public class CredentialsApp {
         LoginModel model = new LoginModel();
         LoginView view = new LoginView(model);
         LoginController controller = new LoginController(model, view);
-      //  MainMenu menu = new MainMenu();
-        
+
         view.setVisible(true);
     }
-    
+
 }
