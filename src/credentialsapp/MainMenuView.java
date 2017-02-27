@@ -27,8 +27,9 @@ public class MainMenuView extends JFrame implements ActionListener{
     private JButton generateUser;
     private JButton generateHash;
     private LoginModel model;
+    private MainMenuModel mode;
     
-    MainMenuView(){
+    MainMenuView(MainMenuModel mode){
         //this.model = model;
         super("Main Menu");
         saveInfo = new JButton("List Credentials");
@@ -131,8 +132,9 @@ public class MainMenuView extends JFrame implements ActionListener{
           getGenerateHash().addActionListener(log);
         }
 
+    
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 }
