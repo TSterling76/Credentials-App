@@ -14,17 +14,20 @@ import javax.swing.JButton;
  * @author nsterling76
  */
 public class MainMenuCntl {
-     private MainMenuView view;
-    
-     private LoginController cntl;
-     private LoginView login;
-     //private ListOfCredentialsView list;
-    
-    MainMenuCntl(MainMenuView view){
+
+    private MainMenuView view;
+    private MainMenuModel model;
+    private LoginController cntl;
+    private LoginView login;
+    //private ListOfCredentialsView list;
+    ListOfCredentialsModel mod = new ListOfCredentialsModel();
+
+    MainMenuCntl(MainMenuModel model, MainMenuView view) {
         this.view = view;
+        this.model = model;
         view.addActionListener(new Activate());
     }
-   
+
     class Activate implements ActionListener {
 
         @Override
@@ -34,20 +37,20 @@ public class MainMenuCntl {
                 System.out.println(1);
             }
             if (btu == view.getSaveInfo()) {
+                System.out.println(1);
                 view.dispose();
-                ListOfCredentialsModel mod = new ListOfCredentialsModel();
                 ListOfCredentialsView list = new ListOfCredentialsView(mod);
+
+            }
+            if (btu == view.getGenerateHash()) {
                 System.out.println(1);
             }
-            if(btu == view.getGenerateHash()){
-            
+            if (btu == view.getGeneratePass()) {
+                System.out.println(1);
             }
-            if(btu == view.getGeneratePass()){
-            
-            }
-            if(btu == view.getGenerateUser()){
-                
-                
+            if (btu == view.getGenerateUser()) {
+                System.out.println(1);
+
             }
 
         }
