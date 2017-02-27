@@ -23,6 +23,8 @@ public class LoginController {
     private final LoginModel model;
     private final LoginView view;
     MainMenuView menu;
+  //  MainMenuModel model1;
+  //  MainMenuCntl cntl;
 
     LoginController(LoginModel model, LoginView view) {
         this.view = view;
@@ -53,10 +55,12 @@ public class LoginController {
                         passtxt = scan.nextLine();
 
                         if ((puname.equals(usertxt)) && (ppaswd.equals(passtxt))) {
-                            menu = new MainMenuView();
+                            
+                            MainMenuModel model1 = new MainMenuModel();
+                            MainMenuView menu = new MainMenuView(model1);
+                            MainMenuCntl cntl = new MainMenuCntl(model1,menu);
                             JOptionPane.showMessageDialog(null, " WELCOME! " + view.getUserField());
                             view.dispose();
-
                         }
                     }
                 } catch (IOException ex) {
