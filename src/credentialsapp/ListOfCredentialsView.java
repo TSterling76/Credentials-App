@@ -5,19 +5,17 @@
  */
 package credentialsapp;
 
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-//import javax.swing.JTable;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-//import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author nsterling76
@@ -47,15 +45,20 @@ public class ListOfCredentialsView extends JFrame{
         this.emailLabel = new JLabel("Insert your Existing Email: ");
         this.urlLabel = new JLabel("Insert the url OR Name of the website: ");
         this.listOfCred = new JTextArea();
+        this.table = new JTable();
         this.sp = new JScrollPane(table);
+        Object[] columns = {"Username","Password","Email","Website/Software/url"};
+        DefaultTableModel mode = new DefaultTableModel();
+        mode.setColumnIdentifiers(columns);
         
-        
+        int[] a = {1,2,3,4,5};
+        System.out.println(a.length-1);
         //file encryption/decryption should be the very last
 
-        JPanel content = new JPanel();
+        JFrame content = new JFrame();
         
-        setSize(570,570);
-        setLocation(500,280);
+        setSize(900,405);
+        setLocationRelativeTo(null);
         content.setLayout(null); 
        
         content.add(listUsername);
@@ -65,34 +68,38 @@ public class ListOfCredentialsView extends JFrame{
         content.add(backButton);
         content.add(addButton);
         content.add(saveButton);
-        content.add(usernameLabel);
-        content.add(passwordLabel);
-        content.add(emailLabel);
-        content.add(urlLabel);
-        content.add(listOfCred);
+      //  content.add(usernameLabel);
+      //  content.add(passwordLabel);
+      //  content.add(emailLabel);
+      //  content.add(urlLabel);
+       // content.add(listOfCred);
         content.add(sp);
-       // content.add(table);
-        
+        content.add(table);
         
          
-     this.listUsername.setBounds(210, 30,150,30);
-     this.listPassword.setBounds(210, 65,150,30);
-     this.listEmail.setBounds(210, 100,150,30);
-     this.listUrl.setBounds(210, 135, 150, 30);
-     this.backButton.setBounds(180, 300,80,20);
-     this.addButton.setBounds(280, 300, 80, 20);
-     this.saveButton.setBounds(340, 300, 80, 20);
-     this.usernameLabel.setBounds(20, 30, 180, 30);
-     this.passwordLabel.setBounds(20, 65, 180, 30);
-     this.emailLabel.setBounds(20, 100 , 180, 30);
-     this.urlLabel.setBounds(20, 135, 200, 30);
-     this.table.setBounds(150, 170, 350, 100);
+        this.listUsername.setBounds(20, 220, 100, 25);
+        this.listPassword.setBounds(20, 250, 100, 25);
+        this.listEmail.setBounds(20, 280, 100, 25);
+        this.listUrl.setBounds(20, 310, 100, 25);
+        this.backButton.setBounds(150, 220, 100, 25);
+        this.addButton.setBounds(150, 265, 100, 25);
+        this.saveButton.setBounds(150, 310, 100, 25);
+        this.usernameLabel.setBounds(20, 30, 180, 30);
+        this.passwordLabel.setBounds(20, 65, 180, 30);
+        this.emailLabel.setBounds(20, 100 , 180, 30);
+        this.urlLabel.setBounds(20, 135, 200, 30);
+        this.listOfCred.setBounds(150, 170, 350, 100);
+        this.table.setBackground(Color.LIGHT_GRAY);
+        this.table.setForeground(Color.black);
+        this.sp.setBounds(0, 0, 880, 200);
+        Font font = new Font("",1,16);
+        this.table.setFont(font);
+        this.table.setRowHeight(25);
     
-        //btnLogin.addActionListener(this);
-       getContentPane().add(content);
-       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       setVisible(true);
-    
+        content.setSize(900,400);
+        content.setLocationRelativeTo(null);
+        content.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        content.setVisible(true); 
     
     }
 
