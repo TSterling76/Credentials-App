@@ -59,7 +59,8 @@ public class LoginController {
                             MainMenuModel model1 = new MainMenuModel();
                             MainMenuView menu = new MainMenuView(model1);
                             MainMenuCntl cntl = new MainMenuCntl(model1,menu);
-                            JOptionPane.showMessageDialog(null, " WELCOME! " + view.getUserField());
+                            JOptionPane.showMessageDialog(null, "  WELCOME!  " + view.getUserField());
+                            
                             view.dispose();
                         }
                     }
@@ -72,11 +73,6 @@ public class LoginController {
             if (btu == view.getNewUSer()) {
                 view.dispose();
                 NewUser user = new NewUser(model);
-
-            }
-
-            if (btu == view.getForgotPass()) {
-                System.out.println("TEST");
 
             }
 
