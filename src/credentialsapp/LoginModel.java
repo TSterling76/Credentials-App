@@ -54,8 +54,9 @@ public void setPassword(String password) {
     /**
      * @return the userField
      */
-    public String getUserField() {
-        return userField.getText();
+public String getUserField() { 
+        LoginView view = new LoginView();
+        return view.getUserField();
     }
 
     /**
