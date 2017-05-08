@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import javax.swing.JPanel;
 
@@ -28,6 +29,7 @@ public class MainMenuView extends JFrame implements ActionListener{
     private JButton generateHash;
     private LoginModel model;
     private MainMenuModel mode;
+    private JLabel name;
     
     MainMenuView(MainMenuModel mode){
         //this.model = model;
@@ -35,21 +37,24 @@ public class MainMenuView extends JFrame implements ActionListener{
         saveInfo = new JButton("List Credentials");
         loadInfo = new JButton("Encrypt your Files");
         generatePass  = new JButton("Generate Password");
-        generateUser = new JButton("Generate Username");
+        generateUser = new JButton("Generator");
         generateHash = new JButton("Generate Hashes");
+        name  = new JLabel();
          
         JPanel content = new JPanel();
         content.add(saveInfo);
         content.add(loadInfo);
-        content.add(generatePass);
+        //content.add(generatePass);
         content.add(generateUser);
         content.add(generateHash);
+        content.add(name);
         this.setContentPane(content);
         this.pack();
         this.setTitle("Main Menu");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         this.setSize(500,500);
         this.setVisible(true);
+        this.setLocation(500,270);
        
         
     }
