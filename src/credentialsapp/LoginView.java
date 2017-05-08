@@ -27,11 +27,12 @@ public class LoginView extends JFrame implements ActionListener{
     private final JTextField userField;
     private final JTextField passField;
     private JButton newUSer;
-    private JButton forgotPass;
     private final JLabel userName;
     private final JLabel passWord;
 
-   
+    public LoginView(){
+        this(null);
+    }
     public LoginView(LoginModel model){
         
         super("Credentials Application");
@@ -40,13 +41,12 @@ public class LoginView extends JFrame implements ActionListener{
         this.passField = new JPasswordField(15);
         this.btnLogin = new JButton(" Login ");
         this.newUSer = new JButton("New User?");
-        this.forgotPass = new JButton("Forgot Password");
         this.userName = new JLabel("Username : ");
         this.passWord = new JLabel("Password : ");
         
         JPanel content = new JPanel();
         
-        setSize(360,340);
+        setSize(360,300);
         setLocation(500,280);
         content.setLayout(null); 
        
@@ -57,7 +57,6 @@ public class LoginView extends JFrame implements ActionListener{
         content.add(newUSer);
         content.add(userName);
         content.add(passWord);
-        content.add(forgotPass);
          
         this.userName.setBounds(40, 30, 150, 30);
         this.passWord.setBounds(40, 65, 150, 30);
@@ -65,7 +64,6 @@ public class LoginView extends JFrame implements ActionListener{
         this.newUSer.setBounds(100, 170, 140, 20);
         this.userField.setBounds(140,30,150,30);
         this.passField.setBounds(140,65,150,30);
-        this.forgotPass.setBounds(100, 210, 140, 20);
         
        getContentPane().add(content);
        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -96,7 +94,6 @@ public class LoginView extends JFrame implements ActionListener{
     public void addLoginListener(ActionListener log) {
           getBtnLogin().addActionListener(log);
           getNewUSer().addActionListener(log);
-          getForgotPass().addActionListener(log);
         }
 
     /**
@@ -155,18 +152,5 @@ public class LoginView extends JFrame implements ActionListener{
         this.newUSer = newUSer;
     }
 
-    /**
-     * @return the forgotPass
-     */
-    public JButton getForgotPass() {
-        return forgotPass;
-    }
-
-    /**
-     * @param forgotPass the forgotPass to set
-     */
-    public void setForgotPass(JButton forgotPass) {
-        this.forgotPass = forgotPass;
-    }
     
 }
