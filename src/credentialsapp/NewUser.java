@@ -112,7 +112,9 @@ public class NewUser extends JFrame implements Serializable {
                         filewrite.close();
                         JOptionPane.showMessageDialog(null, "Your Account has been Created! Welcome, " + userField.getText());
                         dispose();
-                        MainMenu menu = new MainMenu();
+                        MainMenuModel mode = new MainMenuModel();
+                        MainMenuView menu = new MainMenuView(mode);
+                        MainMenuCntl cntl = new MainMenuCntl(mode,menu);
                     } else {
                         JOptionPane.showMessageDialog(null, "This Username/Password/Email is already in use");
                         userField.setText("");
