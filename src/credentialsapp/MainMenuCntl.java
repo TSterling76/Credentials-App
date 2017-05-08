@@ -19,8 +19,6 @@ public class MainMenuCntl {
     private MainMenuModel model;
     private LoginController cntl;
     private LoginView login;
-    //private ListOfCredentialsView list;
-    ListOfCredentialsModel mod = new ListOfCredentialsModel();
 
     MainMenuCntl(MainMenuModel model, MainMenuView view) {
         this.view = view;
@@ -35,22 +33,28 @@ public class MainMenuCntl {
             JButton btu = (JButton) ae.getSource();
             if (btu == view.getLoadInfo()) {
                 System.out.println(1);
+                EncryptFiles files = new EncryptFiles();
+                files.setVisible(true);
             }
             if (btu == view.getSaveInfo()) {
                 System.out.println(1);
-                view.dispose();
-                ListOfCredentialsView list = new ListOfCredentialsView(mod);
-
+                ListOfCredentials1 list = new ListOfCredentials1();
             }
+            
             if (btu == view.getGenerateHash()) {
                 System.out.println(1);
+                GenerateHash hash = new GenerateHash();
+                hash.setVisible(true);
             }
             if (btu == view.getGeneratePass()) {
                 System.out.println(1);
             }
             if (btu == view.getGenerateUser()) {
-                System.out.println(1);
-
+                System.out.println(2);
+                GeneratorUI generate = new GeneratorUI();
+                generate.setVisible(true);
+                
+                
             }
 
         }
